@@ -2,7 +2,7 @@
 Contributors: missiveapp
 Tags: chat bot, live chat, customer support chat, website chat, chat, chat online, contact plugin, contact us, customer support, free chat, chat software, IM chat, live chat, live chat inc, live chat services, live chat software, live chatting, live help, live support, live web chat, livechat, live help, live support, olark, online chat, online support, php live chat, snapengage, support software, website chat, wordpress chat, wordpress live chat, wordpress live chat plugin, Zopim, zendesk, Zopim live chat, banckle, clickdesk, click desk
 Requires at least: 4.0
-Tested up to: 5.3
+Tested up to: 5.6
 Stable tag: 1.0.0
 Requires PHP: 5.2.4
 License: GPLv2 or later
