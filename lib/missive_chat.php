@@ -7,7 +7,9 @@ function missive_chat_footer() {
 	if (empty ( $main_color )) { $main_color = '#000'; }
 
 	$message_welcome = get_option('message_welcome');
-	if (empty($message_welcome)) { $message_welcome = 'Hi there! 👋\n\nThe team will reply as soon as possible.'; }
+	if (empty($message_welcome)) { $message_welcome = 'Hi there! 👋
+
+	The team will reply as soon as possible.'; }
 		$message_help = get_option('message_help');
 	if (empty($message_help)) { $message_help = 'How can we help?'; }
 		$message_identify = get_option('message_identify');
@@ -46,7 +48,7 @@ function missive_chat_footer() {
 		      id: '<?php echo get_option( 'missive_chat_account_id' ); ?>',
 		      chat: {
 		        variables: {
-		          'main-color': '<?php echo $main_color ?>' ,
+		          'main-color': <?php echo json_encode($main_color) ?>,
 		        },
 		      },
 					messages: {
@@ -55,23 +57,23 @@ function missive_chat_footer() {
 		        // - Each string will appear in its own chat bubble
 		        // - URLs are clickable (i.e. 'On our website: https://missiveapp.com')
 		        // - Links can be formatted (i.e. 'On our {{ link:https://missiveapp.com website }}')
-		        welcome: '<?php echo $message_welcome; ?>',
-		        help: '<?php echo $message_help; ?>',
-		        identify: '<?php echo $message_identify; ?>',
-		        error: '<?php echo $message_error; ?>',
+		        welcome: <?php echo json_encode($message_welcome); ?>,
+		        help: <?php echo json_encode($message_help); ?>,
+		        identify: <?php echo json_encode($message_identify); ?>,
+		        error: <?php echo json_encode($message_error); ?>,
 
 		        // UI messages (string only)
-		        title: '<?php echo $message_title; ?>',
-		        online: '<?php echo $message_online; ?>',
-		        offline: '<?php echo $message_offline; ?>',
-		        connecting: '<?php echo $message_connecting; ?>',
-		        chat: '<?php echo $message_chat; ?>',
-		        internet: '<?php echo $message_internet; ?>',
-		        identifyName: '<?php echo $message_identifyName; ?>',
-		        identifyEmail: '<?php echo $message_identifyEmail; ?>',
-		        identifySubmit: '<?php echo $message_identifySubmit; ?>',
-		        identifyRequired: '<?php echo $message_identifyRequired; ?>',
-		        identifyThanks: '<?php echo $message_identifyThanks; ?>',
+		        title: <?php echo json_encode($message_title); ?>,
+		        online: <?php echo json_encode($message_online); ?>,
+		        offline: <?php echo json_encode($message_offline); ?>,
+		        connecting: <?php echo json_encode($message_connecting); ?>,
+		        chat: <?php echo json_encode($message_chat); ?>,
+		        internet: <?php echo json_encode($message_internet); ?>,
+		        identifyName: <?php echo json_encode($message_identifyName); ?>,
+		        identifyEmail: <?php echo json_encode($message_identifyEmail); ?>,
+		        identifySubmit: <?php echo json_encode($message_identifySubmit); ?>,
+		        identifyRequired: <?php echo json_encode($message_identifyRequired); ?>,
+		        identifyThanks: <?php echo json_encode($message_identifyThanks); ?>,
 		      },
 		    };
 
